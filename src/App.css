@@ -1,0 +1,121 @@
+#root{
+  width: 90%;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+header nav ul{
+  text-decoration: none;
+  list-style: none;
+}
+
+.main-home .characters-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.main-home .card-character{
+  width: 600px;
+  height: 250px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+.main-home .card-character {
+  background: #555;
+  border-radius: 10px;
+  overflow: hidden;
+  gap: 16px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.main-home.card-character img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer{
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.characters-page .characters-grid{
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(270px, 1fr)
+  );
+  gap: 16px;
+}
+
+.characters-page .card-character{
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.characters-page .card-character img{
+  width: 100%;
+  border-radius: 10px;
+}
+
+.single-charac{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pagination-link{
+  background: #f2f2f2;
+  color: #333;
+  padding: 10px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: .3s ease;
+}
+
+.pagination-link:hover{
+  color: #f2f2f2;
+  background: #333;
+  border-bottom: 1px solid transparent;
+}
+
+.status{
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgb(158, 158, 158);
+  display: inline-block;
+}
+
+.Alive{
+  background-color: rgb(85, 204, 68);
+}
+
+.Dead{
+  background-color: rgb(214, 61, 46);
+}
