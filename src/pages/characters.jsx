@@ -10,7 +10,7 @@ export default function Characters() {
 
     const [characters, setCharacters] = useState([])
     const [info, setInfo] = useState([])
-    const [ loading, setLoading ] = useState(false)
+    const [loading, setLoading] = useState(false)
 
 
     useEffect(() => {
@@ -23,23 +23,24 @@ export default function Characters() {
             })
     }, [page])
 
-    if( loading ) return <h2>LOADING...</h2>
+    if (loading) return <h2>LOADING...</h2>
 
     return (
-        <main className="characters-page">
-            <h1>Todos los Personajes</h1>
-            <section className="characters-grid">
+        <main className="container mx-auto">
+            {/* <h1>Todos los Personajes</h1> */}
+            <section className="grid grid-cols-2 space-x-5 space-y-5 md:grid-cols-3 lg:grid-cols-4">
                 {
-                    characters.map(character => <Cardharacters
-                        key={character.id}
-                        name={character.name}
-                        species={character.species}
-                        status={character.status}
-                        image={character.image}
-                        loading={loading}
-                    >
-                        <Link to={`/character/details/${page}/${character.id}`}>Ver más</Link>
-                    </Cardharacters>
+                    characters.map(character => (
+                        <Cardharacters
+                            key={character.id}
+                            name={character.name}
+                            species={character.species}
+                            status={character.status}
+                            image={character.image}
+                            loading={loading}
+                        >
+                            <Link to={`/character/details/${page}/${character.id}`}>Ver más</Link>
+                        </Cardharacters>)
                     )
                 }
             </section>
