@@ -24,20 +24,21 @@ export default function Characters() {
             })
     }, [page])
 
-    if (loading) return <h2>LOADING...</h2>
+    if (loading) return <div className="loader flex justify-center items-center mx-auto"></div>
 
     return (
-        <main className="container mx-auto">
+        <main className="container mx-auto px-2 md:px-0">
             {/* <h1>Todos los Personajes</h1> */}
-            <section className="grid grid-cols-2 space-x-5 space-y-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            <section className='grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 md:gap-5 lg:grid-cols-5'>
                 {
                     characters.map(character => (
                         <Cardharacters
                             key={character.id}
+                            image={character.image}
                             status={character.status}
-                            className='max-w-96'
+                            className=''
                         >
-                            <img src={character.image} alt={character.name} className="object-cover w-full" />
+                            {/* <img src={character.image} alt={character.name} className="object-cover w-full" /> */}
                             <div className="p-3">
                                 <h2>{character.name}</h2>
                                 <p>Specie: {character.species}</p>

@@ -26,7 +26,6 @@ export default function SingleCharacter() {
                     species={character.species}
                     className='max-w-80'
                 >
-                    <img src={character.image} alt={character.name} className="object-cover w-full" />
                     <div className="p-3">
                         <h2>{character.name}</h2>
                         <p>Specie: {character.species}</p>

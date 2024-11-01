@@ -1,7 +1,7 @@
 import './App.css'
 import { Link, NavLink, Route, Routes } from 'react-router-dom'
 import Characters from './pages/characters'
-import HomePage from './pages/home'
+import HomePage from './pages/homePage'
 import SingleCharacter from './pages/singleCharacter'
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <header className='mb-10 py-5 bg-slate-900 text-white w-full flex justify-center'>
-        <div className="container">
+        <div className="container p-2 md:p-0">
           <nav className='flex justify-between'>
             <Link to='/'><h1>Rick and Morty API</h1></Link>
             <ul className='flex space-x-3'>
